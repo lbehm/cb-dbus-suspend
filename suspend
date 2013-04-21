@@ -1,0 +1,6 @@
+#!/bin/bash
+
+notify-send --icon="/usr/share/icons/hicolor/scalable/actions/xfpm-hibernate.svg" "Standby wurde initialisiert" "Das System wird in den Energiesparmodus versetzt\!"
+# lock da screen
+cb-lock
+dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend
